@@ -1,0 +1,323 @@
+<!-- .nunjucks -->
+{% extends "layout.html" %}
+<!--Title setting-->
+{% block title %}{% endblock %}
+－ㄋ{% block navigation %} {% import 'nav.html' as nav %}
+<!-- Set navitem to active -->
+{{nav.active('')}}{% endblock %}
+
+{% block HeadContent %}
+{% endblock %}
+
+{% block content %}
+
+<section class="inx-banner">
+    <div>主視覺與預留區塊</div>
+</section>
+<section class="inx-about">
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-md-5 d-flex flex-column align-items-end">
+                <div>
+                    <span>假期氣味</span>
+                    <br>
+                    <br>
+                    <p>由兩位喜歡喝咖啡與登山的高雄女孩所創立的品牌。
+                        在一次到阿里山出遊時，發現豆子風味的世界不僅僅出現在地球的另一端，在台灣的山林間，我們找到了屬於這片土地的咖啡靈魂。每一杯咖啡都訴說著不同的故事，承載著在地農友的用心與堅持。
+                        <br>
+                        <br>不能每天幫你泡一壺美好的心情，但我們可給你想要的假期。
+                    </p>
+                </div>
+
+                <img src="images/signature.png" class="img-fluid founder-sign" alt="創辦人簽名">
+            </div>
+            <div class="col-md-7">
+                <img src="images/about-pexels-burst.jpeg" class="img-fluid coffee-photo" alt="泡咖啡視覺圖">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="inx-product">
+    <div class="container">
+        <div class="inx-head">
+            <div class="subtitle">PRODUCT</div>
+            <div class="title">推薦商品</div>
+        </div>
+        <div class="product-list">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="product-detail.html" class="">
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                <div class="price">NT.1490</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="product-detail.html" class="">
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                <div class="price">NT.1490</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="product-detail.html" class="">
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                <div class="price">NT.1490</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="product-detail.html" class="">
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                <div class="price">NT.1490</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="product-detail.html" class="">
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                <div class="price">NT.1490</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <a href="product-detail.html" class="">
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="images/Coffee-Pouch-1-800.jpg" class="" alt="">
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <div class="title">台灣 阿里山 日曬 賽利納</div>
+                                <div class="price">NT.1490</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- <section class="inx-news d-flex">
+    <div class="inx-head">
+        <div class="subtitle">NEWS</div>
+        <div class="title">新聞中心</div>
+        <a href="#" class="btn-va-more" title="">MORE</a>
+    </div>
+    <div class="swiper swiper-Banner">
+        <div class="swiper-wrapper">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="news-card">
+                        <a href="#" class="">
+                            <div class="caption">
+                                <div class="date">2024/11/25</div>
+                                <div class="title">新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題
+                                </div>
+                            </div>
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="news-card">
+                        <a href="#" class="">
+                            <div class="caption">
+                                <div class="date">2024/11/25</div>
+                                <div class="title">新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題
+                                </div>
+                            </div>
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="news-card">
+                        <a href="#" class="">
+                            <div class="caption">
+                                <div class="date">2024/11/25</div>
+                                <div class="title">新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題
+                                </div>
+                            </div>
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="news-card">
+                        <a href="#" class="">
+                            <div class="caption">
+                                <div class="date">2024/11/25</div>
+                                <div class="title">新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題新聞中心標題
+                                </div>
+                            </div>
+                            <div class="cover">
+                                <div class="img-aspect">
+                                    <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+<section class="inx-video d-flex">
+    <div class="container">
+        <div class="inx-head">
+            <div class="subtitle">VIDEO</div>
+            <div class="title">影音專區</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="video-card">
+                    <a href="#" class="">
+                        <div class="cover">
+                            <div class="img-aspect">
+                                <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <div class="title">影音專區卡片標題</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-card">
+                    <a href="#" class="">
+                        <div class="cover">
+                            <div class="img-aspect">
+                                <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <div class="title">影音專區卡片標題</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="video-card">
+                    <a href="#" class="">
+                        <div class="cover">
+                            <div class="img-aspect">
+                                <img src="https://picsum.photos/200/200?random=1" class="" alt="">
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <div class="title">影音專區卡片標題</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <a href="#" class="btn-va-more" title="">MORE</a>
+    </div>
+</section> -->
+
+
+{% endblock %}
+
+{% block js %}
+<script>
+    // 輪播Banner
+    var swiper = new Swiper(".swiper-Banner", {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+    // 商品清單輪播
+    var swiper = new Swiper(".swiper-product", {
+        spaceBetween: 24,
+        slidesPerView: 2,
+        pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+        },
+        breakpoints: {
+            576: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% macro active(activePage='home') %}
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container">
+        <a class="navbar-brand inx-logo" href="index.html">
+            <img src="images/Sunder-Tarot-logo.png">
+            <img src="images/Sunder-Tarot-logo.png" class="navbar-brand-w">
+            <div class="px-3">
+                <span>Sunder Tarot 靈感指引所</span><br>
+                <span>The Spectrum of Pragmatism</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="nav navbar-nav vac">
+                <li class="nav-item">
+                    <a class="nav-link nav-login">
+                        <span>指引所流程</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-cart">
+                        <span>引導問答</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-search">
+                        <span>預約服務</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</nav>
+{% endmacro %}
