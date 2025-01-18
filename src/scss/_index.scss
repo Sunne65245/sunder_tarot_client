@@ -1,12 +1,19 @@
 // 背景底圖
 .wrapper {
-    background-image: url("../images/bg-main.png");
+    // background-image: url("../images/bg-main.png");
     background-size: cover;
     /* 圖片覆蓋容器 */
-    background-repeat: repeat;
+    // background-repeat: repeat;
     /* 重複顯示 */
-    background-color: #6e6b66;
+
+    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg-main.png");
+    // background-color: #313231;
     /* 備用背景色，防止圖片無法加載時顯示空白 */
+    background-image: url("../images/bg-main.png");
+    background-color: rgba(12, 37, 26, 0.6);
+    /* 黑色半透明遮罩 */
+    background-blend-mode: overlay;
+    /* 或使用其他混合模式 */
 }
 
 // 通用元件
@@ -20,9 +27,37 @@
     }
 
     .title {
-        font-size: 1.75rem;
-        font-weight: 300;
-        letter-spacing: 0.1em;
+
+        // font-size: 2.25rem;
+        // font-weight: 300;
+        // letter-spacing: 0.1em;
+
+        color: $primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-icon {
+            color: $success;
+        }
+
+        &-tw {
+            font-size: 2.25rem;
+        }
+
+        &-en {
+            font-size: 0.875rem;
+            color: rgba($success, 0.8);
+        }
+
+        .desc {
+            margin-top: 32px;
+
+            span {
+                text-align: center;
+                display: block;
+            }
+        }
     }
 }
 
@@ -58,12 +93,6 @@
         box-shadow: 0 6px 16px rgba(darken($primary, 16), 0.6);
         opacity: 0.9;
     }
-}
-
-// 獨立樣式
-.inx-logo {
-    display: flex;
-    color: $primary;
 }
 
 // 首頁排版
@@ -106,7 +135,6 @@
 }
 
 .inx-about {
-    background-color: $white;
     margin: 40px 0;
     padding: 60px 0;
 
@@ -131,8 +159,6 @@
     }
 
 }
-
-
 
 .inx-news {
     padding: 6rem 1rem;
@@ -190,7 +216,6 @@
         margin: 16px auto;
     }
 }
-
 
 .video-card {
     margin-top: 4rem;
@@ -336,7 +361,6 @@
 
 
 }
-
 
 .card {
     background-color: $white;
