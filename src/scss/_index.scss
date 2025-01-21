@@ -1,24 +1,14 @@
 // 背景底圖
 .wrapper {
-    // background-image: url("../images/bg-main.png");
-    background-size: cover;
-    /* 圖片覆蓋容器 */
-    // background-repeat: repeat;
-    /* 重複顯示 */
-
-    // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg-main.png");
-    // background-color: #313231;
-    /* 備用背景色，防止圖片無法加載時顯示空白 */
     background-image: url("../images/bg-main.png");
-    background-color: rgba(12, 37, 26, 0.6);
-    /* 黑色半透明遮罩 */
+    background-size: cover;
     background-blend-mode: overlay;
-    /* 或使用其他混合模式 */
 }
 
 // 通用元件
 .inx-head {
     margin-bottom: 2rem;
+    color: $primary;
 
     .subtitle {
         font-size: 0.875rem;
@@ -27,12 +17,6 @@
     }
 
     .title {
-
-        // font-size: 2.25rem;
-        // font-weight: 300;
-        // letter-spacing: 0.1em;
-
-        color: $primary;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,58 +45,62 @@
     }
 }
 
-.btn-va-more {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    background-color: $white;
-    border-radius: 999px;
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 16px;
-    box-shadow: 0 6px 16px rgba(darken($primary, 16), 0.2);
-
-    &::after {
-        content: "\f061";
-        font-family: "Line Awesome Free";
-        transform: rotate(-45deg);
-        font-weight: 900;
-        margin-left: 8px;
-        color: white;
-        width: 2rem;
-        height: 2rem;
-        background-color: lighten($primary, 24);
-        border-radius: 999px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &:hover {
-        box-shadow: 0 6px 16px rgba(darken($primary, 16), 0.6);
-        opacity: 0.9;
-    }
-}
-
 // 首頁排版
 .inx-banner {
-    position: relative;
+
+    margin-bottom: 6rem;
 
     .caption {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: $white;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        color: $primary;
+        padding-top: 100px;
+
+        .subtitle {
+            font-size: 3rem;
+            background: linear-gradient(to bottom, $primary 0%, #8B7355 50%, $success 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            opacity: .8;
+            letter-spacing: 0.2em;
+            font-family: 'Ibarra Real Nova', serif;
+            font-weight: 700;
+
+            span {
+                display: block;
+                line-height: 3rem;
+            }
+        }
 
         .title {
-            font-size: 4rem;
-            font-weight: 500;
+            font-size: 5rem;
+            letter-spacing: 0.3em;
+            // line-height: 1.2;
+        }
+
+        .word {
+            font-size: 1rem;
+
+            span {
+                display: block;
+                line-height: 1.8rem;
+            }
+        }
+
+        .tiny-glow-icon {
+            padding: 20px 0;
+            width: 120px;
+            display: flex;
+            justify-content: space-between;
+
+            img:nth-child(2) {
+                opacity: 0.6;
+            }
+
+            img:nth-child(3) {
+                opacity: 0.2;
+            }
         }
     }
 
@@ -122,7 +110,6 @@
         .img-aspect {
             aspect-ratio: 16 / 9;
             overflow: hidden;
-
 
             img {
                 width: 100%;
@@ -135,252 +122,208 @@
 }
 
 .inx-about {
-    margin: 40px 0;
-    padding: 60px 0;
 
-    .founder-sign {
-        width: 60%;
-    }
+    position: relative;
 
-    .coffee-photo {
+    &::before {
+        content: '';
+        position: absolute;
+        // top: 0;
+        // left: 0;
         width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
-}
-
-.inx-product {
-    padding: 30px;
-
-    .inx-head {
-        text-align: center;
-        position: relative;
-
+        height: 100%;
+        background-image: url("../images/aboutUs-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        // opacity: 0.5;
+        // z-index: -1;
     }
 
-}
+    // 流程卡片
+    .card-process-list {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 32px;
 
-.inx-news {
-    padding: 6rem 1rem;
-    background: url("../images/wel-visual-bg.png");
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+        /* 卡片容器 */
+        .card-flip {
+            perspective: 1000px;
+            width: 300px;
+            height: 490px;
 
-    .inx-head {
-        color: $white;
-        position: relative;
+            /* 卡片內部容器 */
+            .card-inner {
+                // position: relative;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: transform 0.8s;
+            }
 
-        .subtitle {
-            color: $white;
-            opacity: .6;
-        }
+            /* 翻轉效果 */
+            &:hover .card-inner,
+            &:focus-within .card-inner {
+                transform: rotateY(180deg);
+            }
 
-        &::before {
-            content: "NEWS";
-            font-weight: 800;
-            font-size: 7rem;
-            letter-spacing: 0.1em;
-            opacity: .1;
-            color: white;
-            position: absolute;
-            top: -30%;
-            left: 0%;
-        }
-    }
-}
+            /* 卡片正反面共同樣式 */
+            .card.front,
+            .card.back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border: 12px solid $primary;
+                border-radius: 16px;
+                backface-visibility: hidden;
+            }
 
-.inx-video {
-    background-color: $white;
-    padding: 6rem 0;
+            // 卡片正面
+            .card.front {
+                background-image: url("../images/inquiry-image.jpg");
+                background-size: cover;
 
-    .inx-head {
-        text-align: center;
-        position: relative;
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-end
+                }
 
-        &::before {
-            content: "VIDEO";
-            font-weight: 800;
-            font-size: 7rem;
-            letter-spacing: 0.1em;
-            opacity: .1;
-            color: rgba(darken($primary, 24), 0.4);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%)
-        }
-    }
+                .card-subtitle {
+                    color: $primary;
+                    font-size: 1.5rem;
+                    margin-bottom: 8px;
+                }
 
-    .btn-va-more {
-        margin: 16px auto;
-    }
-}
+                .card-text {
+                    color: $primary;
+                    font-size: 1rem;
+                    opacity: .4;
+                    letter-spacing: 0.1rem;
+                }
 
-.video-card {
-    margin-top: 4rem;
-    background: url("../images/wel-visual-bg.png");
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow: 0 8px 16px rgba(darken($primary, 16), 0.2);
-    border-radius: 4px;
-    // display: flex;
-    // justify-content: center;
-    position: relative;
-    padding-top: 60px;
-    transition: box-shadow 0.3s ease;
+            }
 
-    &:hover {
-        box-shadow: 0 8px 16px rgba(darken($primary, 16), 0.4);
-    }
+            /* 背面卡片 */
+            .card.back {
+                background-image: url("../images/inquiry-imag-back.jpg");
+                background-size: cover;
+                transform: rotateY(180deg);
+                color: $gray-900;
 
-    &::after {
-        content: "\f04b";
-        font-family: "Line Awesome Free";
-        font-weight: 900;
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-        color: $white;
-        background-color: lighten($primary, 24);
-        border-radius: 999px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-    }
+                .card-title {
+                    margin: 20px auto 36px;
+                    text-align: center;
+                    opacity: .75;
+                }
 
-    a {
-        text-decoration: none;
-    }
+                .card-list {
+                    padding: 0 16px;
+
+                    .card-subtitle {
+                        font-size: 1rem;
+                        margin: 16px 0;
+                        opacity: .75;
+                    }
+
+                    .list-unstyled {
+                        font-size: 0.8rem;
+                        opacity: .75;
 
 
-    .cover {
-        margin-top: -8rem;
+                        li {
+                            display: flex;
+                            flex-direction: row;
 
-        .img-aspect {
-            aspect-ratio: 16 / 9;
-            border-radius: 4px;
-            overflow: hidden;
+                            &::before {
+                                content: "";
+                                height: 1px;
+                                width: 1px;
+                                padding: 2px;
+                                margin: 10px;
+                                display: inline-block;
+                                background-color: $gray-900;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
 
-            margin: 0 20px;
+                .card-text {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 24px;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    opacity: 0.1;
+                }
 
-            img {
+            }
+
+            /* 確保卡片內容不會超出範圍 */
+            .card img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                object-position: center;
             }
         }
+
     }
 
-    .caption {
-        color: $white;
-        padding: 20px;
-        min-height: 5rem;
-    }
-
-
-}
-
-.news-card {
-    margin-top: 1rem;
-    background-color: $white;
-    box-shadow: 0 8px 16px rgba(darken($primary, 16), 0.2);
-    border-radius: 4px;
-
-    position: relative;
-    transition: box-shadow 0.3s ease;
-
-    &:hover {
-        box-shadow: 0 8px 16px rgba(darken($primary, 16), 0.4);
-    }
-
-    &::after {
-        content: "\f061";
-        font-family: "Line Awesome Free";
-        transform: rotate(-45deg);
-        font-weight: 900;
-        margin-left: 8px;
-        color: white;
-        width: 1.4rem;
-        height: 1.4rem;
-        background-color: lighten($primary, 24);
-        border-radius: 999px;
-        display: inline-flex;
-        align-items: center;
+    /* 流程注意事項 */
+    .notice {
+        display: flex;
         justify-content: center;
-        position: absolute;
-        top: 14px;
-        right: 14px;
-    }
+        margin-top: 48px;
+        color: $primary;
 
-    a {
-        text-decoration: none;
-    }
+        .card-list {
+            padding: 0 56px;
 
+            .card-subtitle {
+                font-size: 1.2rem;
+                margin: 16px 0;
+                // opacity: .75;
+            }
 
+            .list-unstyled {
+                font-size: 1rem;
+                line-height: 2;
+                // opacity: .75;
 
-    .cover {
-        .img-aspect {
-            aspect-ratio: 4 / 3;
-            overflow: hidden;
+                li {
+                    display: flex;
+                    align-items: center;
 
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
+                    &::before {
+                        content: "";
+                        height: 1px;
+                        width: 1px;
+                        padding: 2px;
+                        margin: 8px;
+                        display: inline-block;
+                        background-color: $primary;
+                        border-radius: 50%;
+                    }
+                }
             }
         }
     }
-
-    .caption {
-        color: $gray-900;
-        padding: 20px;
-        font-size: 0.875rem;
-        letter-spacing: 0.1em;
-
-        .date {
-            color: $gray-600;
-            font-size: 0.75rem;
-        }
-
-        .title {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            // -webkit-line-clamp: 2; // 限制行數為2
-            overflow: hidden;
-            padding: 8px 32px 0 0;
-            line-height: 1.5;
-        }
-    }
-
-
 }
 
-.card {
-    background-color: $white;
 
-    a {
-        text-decoration: none;
+
+
+
+// RWD 平版
+@include media-breakpoint-down(lg) {
+
+    // 流程卡片
+    .card-process-list {
+        flex-wrap: wrap;
+        row-gap: 2rem; // 列間距
+        column-gap: 20px; // 欄間距
     }
-
-    // .date {}
-
-    .subtitle {
-        font-size: 0.8rem;
-        font-weight: 600;
-    }
-
-    .title {
-        font-size: 1.2rem;
-    }
-
-    // .text {}
-
-    // .summary {}
 }

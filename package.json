@@ -2,7 +2,7 @@
   "type": "commonjs",
   "name": "dev_gulp",
   "version": "1.0.1",
-  "description": "凌誠 gulp 重構版本 v.1.0.1 by 猫",
+  "description": " ＬC gulp 重構版本 v.1.0.1 ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

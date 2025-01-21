@@ -58,128 +58,202 @@
 /*- 頁尾 -*/
 .footer {
     padding: 64px 0;
-    background-color: $gray-900;
-    color: $white;
+    background-color: $footer-bg;
+    color: $primary;
 
-
-    .container {
+    .caption {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+        flex-direction: column;
 
-    .footer-logo img {
-        height: 60px;
-    }
-
-    .footer-copyright {
-        font-size: 0.875rem;
-    }
-
-    .community-btn {
-        margin-top: 16px;
-
-        a>img {
-            width: 24px;
-            height: 100%;
-        }
-    }
-
-    .foot-list {
-        line-height: 1.5rem;
-    }
-
-    @include media-breakpoint-down(md) {
-        .container {
-            flex-direction: column;
-        }
-
-        .footer-copyright {
-            text-align: center;
-        }
-    }
-}
-
-/*- 頁面通用 -*/
-.pg-body {
-    padding: 32px 0;
-    background-color: $white;
-
-    @include media-breakpoint-up(md) {
-        min-height: 70vh;
-    }
-}
-
-/*- 頁面名稱 -*/
-.pg-banner {
-    margin-bottom: 32px;
-}
-
-/*- 麵包屑 -*/
-.pg-breadcrumb {
-    font-size: .875rem;
-    margin: 16px 0;
-
-    a {
-        text-decoration: none;
-    }
-
-    .breadcrumb-item+.breadcrumb-item::before {
-        color: $gray-300;
-    }
-}
-
-/*- 返回 -*/
-.pg-back {
-    text-align: center;
-
-    .btn-back {
-        min-width: 120px;
-        font-size: 0.875rem;
-        color: $gray-600;
-        background: #fff;
-        border-radius: 99px;
-
-        &:hover,
-        &:focus {
-            color: $primary;
-        }
-    }
-}
-
-.vac {
-    .nav-link {
-        cursor: pointer;
-
-        span {
-            display: flex;
-            align-items: center;
-            position: relative; // 確保偽元素的定位基準
-        }
-
-        // icon 的偽元素
-        span::before {
-            content: "";
+        .subtitle {
+            font-size: 1.8rem;
+            background: linear-gradient(to bottom, $primary 0%, $success 50%, $success 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
             display: inline-block;
-            width: 20px;
-            height: 20px;
-            margin-right: 8px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            opacity: .8;
+            letter-spacing: 0.2em;
+            font-family: 'Ibarra Real Nova', serif;
+            font-weight: 700;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 0.3em;
+            margin-top: 1.2px;
+
+        }
+
+        .word {
+            margin-top: 0.5rem;
+
+            span {
+                display: block;
+                font-size: 0.8rem;
+                opacity: .6;
+                line-height: 1.2rem;
+            }
         }
     }
 
-    // 個別 icon 設定
-    .nav-login span::before {
-        background-image: url('../images/Icons/icon-account.svg');
+    .contact-info {
+
+
+        .social-icon {
+            opacity: .6;
+
+            a:hover {
+                opacity: 1;
+            }
+        }
+
+        .store-info {
+            opacity: 0.8;
+
+            span {
+                margin-top: 0.8rem;
+                display: block;
+                line-height: 1;
+                font-size: 0.9rem;
+            }
+        }
+
+        .copyright {
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+            opacity: .6;
+        }
     }
 
-    .nav-cart span::before {
-        background-image: url('../images/Icons/icon-shopping-cart.svg');
-    }
-
-    .nav-search span::before {
-        background-image: url('../images/Icons/icon-search.svg');
-    }
 }
+
+// .footer {
+//     padding: 64px 0;
+//     background-color: $gray-900;
+//     color: $white;
+
+
+//     .container {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//     }
+
+//     .footer-logo img {
+//         height: 60px;
+//     }
+
+//     .footer-copyright {
+//         font-size: 0.875rem;
+//     }
+
+//     .community-btn {
+//         margin-top: 16px;
+
+//         a>img {
+//             width: 24px;
+//             height: 100%;
+//         }
+//     }
+
+//     .foot-list {
+//         line-height: 1.5rem;
+//     }
+
+//     @include media-breakpoint-down(md) {
+//         .container {
+//             flex-direction: column;
+//         }
+
+//         .footer-copyright {
+//             text-align: center;
+//         }
+//     }
+// }
+
+// /*- 頁面通用 -*/
+// .pg-body {
+//     padding: 32px 0;
+//     background-color: $white;
+
+//     @include media-breakpoint-up(md) {
+//         min-height: 70vh;
+//     }
+// }
+
+// /*- 頁面名稱 -*/
+// .pg-banner {
+//     margin-bottom: 32px;
+// }
+
+// /*- 麵包屑 -*/
+// .pg-breadcrumb {
+//     font-size: .875rem;
+//     margin: 16px 0;
+
+//     a {
+//         text-decoration: none;
+//     }
+
+//     .breadcrumb-item+.breadcrumb-item::before {
+//         color: $gray-300;
+//     }
+// }
+
+// /*- 返回 -*/
+// .pg-back {
+//     text-align: center;
+
+//     .btn-back {
+//         min-width: 120px;
+//         font-size: 0.875rem;
+//         color: $gray-600;
+//         background: #fff;
+//         border-radius: 99px;
+
+//         &:hover,
+//         &:focus {
+//             color: $primary;
+//         }
+//     }
+// }
+
+// .vac {
+//     .nav-link {
+//         cursor: pointer;
+
+//         span {
+//             display: flex;
+//             align-items: center;
+//             position: relative; // 確保偽元素的定位基準
+//         }
+
+//         // icon 的偽元素
+//         span::before {
+//             content: "";
+//             display: inline-block;
+//             width: 20px;
+//             height: 20px;
+//             margin-right: 8px;
+//             background-size: contain;
+//             background-repeat: no-repeat;
+//             background-position: center;
+//         }
+//     }
+
+//     // 個別 icon 設定
+//     .nav-login span::before {
+//         background-image: url('../images/Icons/icon-account.svg');
+//     }
+
+//     .nav-cart span::before {
+//         background-image: url('../images/Icons/icon-shopping-cart.svg');
+//     }
+
+//     .nav-search span::before {
+//         background-image: url('../images/Icons/icon-search.svg');
+//     }
+// }
