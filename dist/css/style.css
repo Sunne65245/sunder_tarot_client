@@ -14020,6 +14020,8 @@ section + section {
 
 .inx-banner {
   margin-bottom: 6rem;
+  position: relative;
+  z-index: 1;
 }
 .inx-banner .caption {
   color: #F7F4EB;
@@ -14044,7 +14046,7 @@ section + section {
   line-height: 3rem;
 }
 .inx-banner .caption .title {
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: 0.3em;
 }
 .inx-banner .caption .word {
@@ -14085,9 +14087,6 @@ section + section {
   -o-object-position: center;
      object-position: center;
 }
-.inx-banner .mainVisual {
-  position: relative;
-}
 .inx-banner .mainVisual-window {
   position: absolute;
   right: 0;
@@ -14116,6 +14115,94 @@ section + section {
   margin: auto;
   border-radius: 50% 50% 0 0;
   overflow: hidden;
+}
+.inx-banner .mainVisual {
+  position: relative;
+}
+.inx-banner .stone-elements {
+  position: relative;
+  height: 460px;
+}
+.inx-banner .stone-elements::before {
+  content: "";
+  position: absolute;
+  left: 30%;
+  top: 0;
+  background-image: url("../images/stone-s.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  display: block;
+  z-index: -1;
+  -webkit-animation: floatSmall 6s ease-in-out infinite;
+          animation: floatSmall 6s ease-in-out infinite;
+}
+.inx-banner .stone-elements::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/stone-b.png");
+  right: -10%;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 300px;
+  display: block;
+  z-index: -1;
+  -webkit-animation: floatBig 8s ease-in-out infinite;
+          animation: floatBig 8s ease-in-out infinite;
+}
+.inx-banner .stone-node {
+  width: 200px;
+  height: 200px;
+  top: 0;
+  background-image: url("../images/node.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  position: absolute;
+  z-index: 2;
+}
+.inx-banner .mainVisual-window-foot {
+  margin: 3rem 3rem 0 0;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 600px;
+  height: 460px;
+  background-image: url("../images/mainVisual-window-foot.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.inx-banner .mainVisual-window-foot::before {
+  content: "";
+  width: 140px;
+  height: 460px;
+  position: absolute;
+  top: -8%;
+  right: -10%;
+  display: block;
+  background-image: url("../images/node.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  position: absolute;
+  z-index: 2;
+  -webkit-animation: scaleEffect 4s ease-in-out infinite;
+          animation: scaleEffect 4s ease-in-out infinite;
+}
+.inx-banner .mainVisual-window-foot::after {
+  content: "";
+  width: 600px;
+  height: 460px;
+  display: block;
+  background-image: url("../images/mainVisual-stars.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left top;
+  position: absolute;
 }
 
 .inx-divination {
@@ -14377,6 +14464,122 @@ input[type=time]::-webkit-calendar-picker-indicator {
     -webkit-column-gap: 20px;
        -moz-column-gap: 20px;
             column-gap: 20px;
+  }
+}
+@-webkit-keyframes floatSmall {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translate(5px, 5px) rotate(1deg);
+            transform: translate(5px, 5px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-5px, 8px) rotate(-1deg);
+            transform: translate(-5px, 8px) rotate(-1deg);
+  }
+  75% {
+    -webkit-transform: translate(-8px, -3px) rotate(0deg);
+            transform: translate(-8px, -3px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes floatSmall {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translate(5px, 5px) rotate(1deg);
+            transform: translate(5px, 5px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-5px, 8px) rotate(-1deg);
+            transform: translate(-5px, 8px) rotate(-1deg);
+  }
+  75% {
+    -webkit-transform: translate(-8px, -3px) rotate(0deg);
+            transform: translate(-8px, -3px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+}
+@-webkit-keyframes floatBig {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translate(8px, 8px) rotate(-1deg);
+            transform: translate(8px, 8px) rotate(-1deg);
+  }
+  50% {
+    -webkit-transform: translate(-8px, 12px) rotate(1deg);
+            transform: translate(-8px, 12px) rotate(1deg);
+  }
+  75% {
+    -webkit-transform: translate(-12px, -5px) rotate(0deg);
+            transform: translate(-12px, -5px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+}
+@keyframes floatBig {
+  0% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translate(8px, 8px) rotate(-1deg);
+            transform: translate(8px, 8px) rotate(-1deg);
+  }
+  50% {
+    -webkit-transform: translate(-8px, 12px) rotate(1deg);
+            transform: translate(-8px, 12px) rotate(1deg);
+  }
+  75% {
+    -webkit-transform: translate(-12px, -5px) rotate(0deg);
+            transform: translate(-12px, -5px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotate(0deg);
+            transform: translate(0, 0) rotate(0deg);
+  }
+}
+@-webkit-keyframes scaleEffect {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scaleEffect {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 /*# sourceMappingURL=style.css.map */
