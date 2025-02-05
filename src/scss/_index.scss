@@ -1,13 +1,18 @@
 // 背景底圖
 .wrapper {
-    background-image: url("../images/bg-main.png");
+    background-image: url("../images/bg-main.png") !important;
     background-size: cover;
     background-blend-mode: overlay;
+    z-index: -10;
+}
+
+section+section {
+    margin-top: 72px;
 }
 
 // 通用元件
 .inx-head {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     color: $primary;
 
     .subtitle {
@@ -45,7 +50,7 @@
     }
 }
 
-// 首頁排版
+// 首頁主視覺
 .inx-banner {
 
     margin-bottom: 6rem;
@@ -119,25 +124,69 @@
             }
         }
     }
+
+    .mainVisual {
+        position: relative
+    }
+
+    .mainVisual-window {
+        position: absolute; // 絕對定位
+        right: 0;
+        width: 500px;
+        height: 460px;
+        background-image: url("../images/mainVisual-window-v2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        // width: 100%;
+        // height: 550px;
+        z-index: 0
+    }
+
+    .mainVisual-foot {
+        position: absolute; // 絕對定位，與 window 同位置
+        top: 60px;
+        left: -50px;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/mainVisual-foot-L.png");
+        background-color: rgba(0, 255, 255, 0.316);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        z-index: 1; // 確保在較高層
+        width: 430px; // 圓頂框寬度
+        height: 520px; // 圓頂框高度
+        margin: auto; // 水平置中
+        border-radius: 50% 50% 0 0; // 圓頂效果
+        overflow: hidden; // 防止內容溢出
+    }
+
+
 }
 
-.inx-about {
-
+.inx-divination {
+    padding: 24px 0;
     position: relative;
 
     &::before {
         content: '';
         position: absolute;
-        // top: 0;
-        // left: 0;
+        bottom: 0;
         width: 100%;
-        height: 100%;
-        background-image: url("../images/aboutUs-bg.jpg");
+        height: 70%;
+        background-image: url("../images/divination-bg.jpg");
         background-size: cover;
-        background-position: center;
+        background-position: 25% 10%;
         background-repeat: no-repeat;
-        // opacity: 0.5;
-        // z-index: -1;
+        opacity: 0.3;
+    }
+
+    // 確保內容在上
+    .inx-head,
+    .container {
+        position: relative;
+        z-index: 1;
     }
 
     // 流程卡片
@@ -176,6 +225,7 @@
                 border: 12px solid $primary;
                 border-radius: 16px;
                 backface-visibility: hidden;
+                box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
             }
 
             // 卡片正面
@@ -313,7 +363,104 @@
     }
 }
 
+.QA-list {
 
+    ul,
+    li {
+        list-style: none;
+    }
+
+
+    li {
+        text-align: center;
+        color: $primary;
+        padding: 24px;
+        border-bottom: 1px $primary dashed;
+    }
+}
+
+// /* 移除原本的 icon */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.inx-booking {
+    .booking-title {
+        font-size: 1.25rem;
+        display: flex;
+        padding-bottom: 16px;
+
+        &::before {
+            content: "";
+            background-image: url("../images/tiny-glow.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+    }
+
+    .booking-container {
+        color: $primary;
+        display: flex;
+        justify-content: space-between;
+
+        .booking-description {
+            opacity: 0.6;
+        }
+
+        .booking-slogan {
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+    }
+
+    // input[type="date"].form-control,
+    // input[type="time"].form-control {
+    //     min-width: 0;
+    //     width: 100%;
+    //     box-sizing: border-box;
+    // }
+
+    // /* 時段 */
+    // input[type="time"] {
+    //     background-image: url('../images/icon-time.svg');
+    //     background-position: right 10px center;
+    //     background-repeat: no-repeat;
+    //     padding-right: 30px;
+
+    //     // &:focus {
+    //     //     filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+    //     // }
+    // }
+
+    // /* 電話 */
+    // input[type="tel"] {
+    //     background-image: url('../images/phone-icon.png');
+    //     background-position: right 10px center;
+    //     background-repeat: no-repeat;
+    //     padding-right: 30px;
+    // }
+
+    // /* 姓名和信箱 */
+    // input[type="text"] {
+    //     background-image: url('../images/user-icon.png');
+    //     background-position: right 10px center;
+    //     background-repeat: no-repeat;
+    //     padding-right: 30px;
+    // }
+
+    /* 問題textarea */
+    // textarea {
+    //     background-image: url('../images/question-icon.png');
+    //     background-position: right 10px top 10px;
+    //     background-repeat: no-repeat;
+    //     padding-right: 30px;
+    // }
+}
 
 
 

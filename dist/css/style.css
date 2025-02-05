@@ -13899,6 +13899,7 @@ textarea.form-control-lg {
 
 /*- 頁尾 -*/
 .footer {
+  margin-top: 60px;
   padding: 64px 0;
   background-color: #666246;
   color: #F7F4EB;
@@ -13968,13 +13969,18 @@ textarea.form-control-lg {
 }
 
 .wrapper {
-  background-image: url("../images/bg-main.png");
+  background-image: url("../images/bg-main.png") !important;
   background-size: cover;
   background-blend-mode: overlay;
+  z-index: -10;
+}
+
+section + section {
+  margin-top: 72px;
 }
 
 .inx-head {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   color: #F7F4EB;
 }
 .inx-head .subtitle {
@@ -14079,22 +14085,62 @@ textarea.form-control-lg {
   -o-object-position: center;
      object-position: center;
 }
+.inx-banner .mainVisual {
+  position: relative;
+}
+.inx-banner .mainVisual-window {
+  position: absolute;
+  right: 0;
+  width: 500px;
+  height: 460px;
+  background-image: url("../images/mainVisual-window-v2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  z-index: 0;
+}
+.inx-banner .mainVisual-foot {
+  position: absolute;
+  top: 60px;
+  left: -50px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/mainVisual-foot-L.png");
+  background-color: rgba(0, 255, 255, 0.316);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  width: 430px;
+  height: 520px;
+  margin: auto;
+  border-radius: 50% 50% 0 0;
+  overflow: hidden;
+}
 
-.inx-about {
+.inx-divination {
+  padding: 24px 0;
   position: relative;
   /* 流程注意事項 */
 }
-.inx-about::before {
+.inx-divination::before {
   content: "";
   position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  background-image: url("../images/aboutUs-bg.jpg");
+  height: 70%;
+  background-image: url("../images/divination-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 25% 10%;
   background-repeat: no-repeat;
+  opacity: 0.3;
 }
-.inx-about .card-process-list {
+.inx-divination .inx-head,
+.inx-divination .container {
+  position: relative;
+  z-index: 1;
+}
+.inx-divination .card-process-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14103,7 +14149,7 @@ textarea.form-control-lg {
   margin-top: 32px;
   /* 卡片容器 */
 }
-.inx-about .card-process-list .card-flip {
+.inx-divination .card-process-list .card-flip {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   width: 300px;
@@ -14114,7 +14160,7 @@ textarea.form-control-lg {
   /* 背面卡片 */
   /* 確保卡片內容不會超出範圍 */
 }
-.inx-about .card-process-list .card-flip .card-inner {
+.inx-divination .card-process-list .card-flip .card-inner {
   width: 100%;
   height: 100%;
   -webkit-transform-style: preserve-3d;
@@ -14124,12 +14170,12 @@ textarea.form-control-lg {
   transition: transform 0.8s;
   transition: transform 0.8s, -webkit-transform 0.8s;
 }
-.inx-about .card-process-list .card-flip:hover .card-inner, .inx-about .card-process-list .card-flip:focus-within .card-inner {
+.inx-divination .card-process-list .card-flip:hover .card-inner, .inx-divination .card-process-list .card-flip:focus-within .card-inner {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
-.inx-about .card-process-list .card-flip .card.front,
-.inx-about .card-process-list .card-flip .card.back {
+.inx-divination .card-process-list .card-flip .card.front,
+.inx-divination .card-process-list .card-flip .card.back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -14137,12 +14183,14 @@ textarea.form-control-lg {
   border-radius: 16px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  -webkit-box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 16px 16px rgba(0, 0, 0, 0.25);
 }
-.inx-about .card-process-list .card-flip .card.front {
+.inx-divination .card-process-list .card-flip .card.front {
   background-image: url("../images/inquiry-image.jpg");
   background-size: cover;
 }
-.inx-about .card-process-list .card-flip .card.front .card-body {
+.inx-divination .card-process-list .card-flip .card.front .card-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14157,42 +14205,42 @@ textarea.form-control-lg {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.inx-about .card-process-list .card-flip .card.front .card-subtitle {
+.inx-divination .card-process-list .card-flip .card.front .card-subtitle {
   color: #F7F4EB;
   font-size: 1.5rem;
   margin-bottom: 8px;
 }
-.inx-about .card-process-list .card-flip .card.front .card-text {
+.inx-divination .card-process-list .card-flip .card.front .card-text {
   color: #F7F4EB;
   font-size: 1rem;
   opacity: 0.4;
   letter-spacing: 0.1rem;
 }
-.inx-about .card-process-list .card-flip .card.back {
+.inx-divination .card-process-list .card-flip .card.back {
   background-image: url("../images/inquiry-imag-back.jpg");
   background-size: cover;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   color: #212529;
 }
-.inx-about .card-process-list .card-flip .card.back .card-title {
+.inx-divination .card-process-list .card-flip .card.back .card-title {
   margin: 20px auto 36px;
   text-align: center;
   opacity: 0.75;
 }
-.inx-about .card-process-list .card-flip .card.back .card-list {
+.inx-divination .card-process-list .card-flip .card.back .card-list {
   padding: 0 16px;
 }
-.inx-about .card-process-list .card-flip .card.back .card-list .card-subtitle {
+.inx-divination .card-process-list .card-flip .card.back .card-list .card-subtitle {
   font-size: 1rem;
   margin: 16px 0;
   opacity: 0.75;
 }
-.inx-about .card-process-list .card-flip .card.back .card-list .list-unstyled {
+.inx-divination .card-process-list .card-flip .card.back .card-list .list-unstyled {
   font-size: 0.8rem;
   opacity: 0.75;
 }
-.inx-about .card-process-list .card-flip .card.back .card-list .list-unstyled li {
+.inx-divination .card-process-list .card-flip .card.back .card-list .list-unstyled li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14201,7 +14249,7 @@ textarea.form-control-lg {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.inx-about .card-process-list .card-flip .card.back .card-list .list-unstyled li::before {
+.inx-divination .card-process-list .card-flip .card.back .card-list .list-unstyled li::before {
   content: "";
   height: 1px;
   width: 1px;
@@ -14211,7 +14259,7 @@ textarea.form-control-lg {
   background-color: #212529;
   border-radius: 50%;
 }
-.inx-about .card-process-list .card-flip .card.back .card-text {
+.inx-divination .card-process-list .card-flip .card.back .card-text {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -14222,13 +14270,13 @@ textarea.form-control-lg {
   font-size: 1.2rem;
   opacity: 0.1;
 }
-.inx-about .card-process-list .card-flip .card img {
+.inx-divination .card-process-list .card-flip .card img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.inx-about .notice {
+.inx-divination .notice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14238,18 +14286,18 @@ textarea.form-control-lg {
   margin-top: 48px;
   color: #F7F4EB;
 }
-.inx-about .notice .card-list {
+.inx-divination .notice .card-list {
   padding: 0 56px;
 }
-.inx-about .notice .card-list .card-subtitle {
+.inx-divination .notice .card-list .card-subtitle {
   font-size: 1.2rem;
   margin: 16px 0;
 }
-.inx-about .notice .card-list .list-unstyled {
+.inx-divination .notice .card-list .list-unstyled {
   font-size: 1rem;
   line-height: 2;
 }
-.inx-about .notice .card-list .list-unstyled li {
+.inx-divination .notice .card-list .list-unstyled li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14257,7 +14305,7 @@ textarea.form-control-lg {
       -ms-flex-align: center;
           align-items: center;
 }
-.inx-about .notice .card-list .list-unstyled li::before {
+.inx-divination .notice .card-list .list-unstyled li::before {
   content: "";
   height: 1px;
   width: 1px;
@@ -14266,6 +14314,59 @@ textarea.form-control-lg {
   display: inline-block;
   background-color: #F7F4EB;
   border-radius: 50%;
+}
+
+.QA-list ul,
+.QA-list li {
+  list-style: none;
+}
+.QA-list li {
+  text-align: center;
+  color: #F7F4EB;
+  padding: 24px;
+  border-bottom: 1px #F7F4EB dashed;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.inx-booking {
+  /* 問題textarea */
+}
+.inx-booking .booking-title {
+  font-size: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 16px;
+}
+.inx-booking .booking-title::before {
+  content: "";
+  background-image: url("../images/tiny-glow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.inx-booking .booking-container {
+  color: #F7F4EB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.inx-booking .booking-container .booking-description {
+  opacity: 0.6;
+}
+.inx-booking .booking-container .booking-slogan {
+  opacity: 0.6;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 1023.98px) {
