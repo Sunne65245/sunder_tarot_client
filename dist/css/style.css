@@ -14480,6 +14480,9 @@ input[type=time]::-webkit-calendar-picker-indicator {
   .tiny-glow-icon {
     margin: auto;
   }
+  .stone-elements::after {
+    right: 0%;
+  }
   .card-process-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
