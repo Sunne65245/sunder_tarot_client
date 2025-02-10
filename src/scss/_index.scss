@@ -59,7 +59,6 @@ section+section {
 
     .title-stone {
         position: relative;
-        // height: 460px;
 
         &::before {
             content: "";
@@ -82,7 +81,6 @@ section+section {
             background-image: url("../images/stone-r-s.png");
             left: -10%;
             top: 90%;
-            // bottom: -3%;
             background-size: contain;
             background-repeat: no-repeat;
             width: 100px;
@@ -118,9 +116,10 @@ section+section {
         }
 
         .title {
-            font-size: 4rem;
-            letter-spacing: 0.3em;
-            // line-height: 1.2;
+            font-size: 4.8rem;
+            letter-spacing: 1rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
         .word {
@@ -138,12 +137,16 @@ section+section {
             display: flex;
             justify-content: space-between;
 
+            img {
+                animation: glow 6s infinite;
+            }
+
             img:nth-child(2) {
-                opacity: 0.6;
+                animation-delay: 3s;
             }
 
             img:nth-child(3) {
-                opacity: 0.2;
+                animation-delay: 5s;
             }
         }
     }
@@ -163,41 +166,6 @@ section+section {
             }
         }
     }
-
-
-
-    // .mainVisual-window {
-    //     position: absolute; // 絕對定位
-    //     right: 0;
-    //     width: 500px;
-    //     height: 460px;
-    //     background-image: url("../images/mainVisual-window-v2.png");
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     background-position: right;
-    //     // width: 100%;
-    //     // height: 550px;
-    //     z-index: 0
-    // }
-
-    // .mainVisual-foot {
-    //     position: absolute; // 絕對定位，與 window 同位置
-    //     top: 60px;
-    //     left: -50px;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-image: url("../images/mainVisual-foot-L.png");
-    //     background-color: rgba(0, 255, 255, 0.316);
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     background-position: top;
-    //     z-index: 1; // 確保在較高層
-    //     width: 430px; // 圓頂框寬度
-    //     height: 520px; // 圓頂框高度
-    //     margin: auto; // 水平置中
-    //     border-radius: 50% 50% 0 0; // 圓頂效果
-    //     overflow: hidden; // 防止內容溢出
-    // }
 
 
     .mainVisual {
@@ -227,7 +195,7 @@ section+section {
             content: "";
             position: absolute;
             background-image: url("../images/stone-b.png");
-            right: -10%;
+            right: -4%;
             top: 0;
             background-size: contain;
             background-repeat: no-repeat;
@@ -237,7 +205,6 @@ section+section {
             z-index: -1;
             animation: floatBig 8s ease-in-out infinite;
         }
-
 
     }
 
@@ -256,15 +223,12 @@ section+section {
     .mainVisual-window-foot {
         position: absolute;
         top: 6%;
-        // left: 30%;
         width: 100%;
-        height: 460px;
-        background-image: url("../images/mainVisual-window-foot-v6.png");
+        height: 500px;
+        background-image: url("../images/mainVisual-window-foot-v7.png");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        // overflow: hidden;
-        // animation: floatBig 10s ease-in-out infinite;
 
         &::before {
             content: "";
@@ -283,22 +247,15 @@ section+section {
             animation: scaleEffect 4s ease-in-out infinite;
         }
 
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     border: 4px solid #fff; // 白色邊框
-        //     border-radius: 200px 200px 0 0; // 下方圓弧
-
-        // }
-
     }
 
-
 }
+
+
+.btn-primary:hover {
+    filter: brightness(0.85) !important; // 整體變暗
+}
+
 
 .inx-divination {
     padding: 24px 0;
@@ -338,7 +295,6 @@ section+section {
 
             /* 卡片內部容器 */
             .card-inner {
-                // position: relative;
                 width: 100%;
                 height: 100%;
                 transform-style: preserve-3d;
@@ -543,6 +499,20 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         display: flex;
         justify-content: space-between;
 
+        .booking-instruction {
+
+            &::after {
+                content: "";
+                background-image: url("../images/stone-two.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100px;
+                height: 100px;
+                display: block;
+                // animation: floatSmall 6s ease-in-out infinite;
+            }
+        }
+
         .booking-description {
             opacity: 0.6;
         }
@@ -602,15 +572,28 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 // RWD 平版
 @include media-breakpoint-down(lg) {
 
+    .mainVisual-window-foot {
+        left: -5%;
+    }
+
+    .tiny-glow-icon {
+        margin: auto;
+    }
+
+    .stone-elements &::after {
+        right: 0%;
+    }
+
     // 流程卡片
     .card-process-list {
         flex-wrap: wrap;
         row-gap: 2rem; // 列間距
         column-gap: 20px; // 欄間距
     }
+
 }
 
-// 動態效果        
+// 動態效果：背景石頭        
 @keyframes floatSmall {
     0% {
         transform: translate(0, 0) rotate(0deg);
@@ -655,6 +638,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     }
 }
 
+// 動態效果：背景左側三點線條光
 @keyframes scaleEffect {
     0% {
         transform: scale(1);
@@ -666,5 +650,22 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
     100% {
         transform: scale(1);
+    }
+}
+
+// 動態效果：標題底下三光輪流閃爍
+@keyframes glow {
+
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+
+    33% {
+        opacity: 0.6;
+    }
+
+    66% {
+        opacity: 1;
     }
 }

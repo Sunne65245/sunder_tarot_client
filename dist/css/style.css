@@ -13968,6 +13968,11 @@ textarea.form-control-lg {
   opacity: 0.6;
 }
 
+@media (max-width: 767.98px) {
+  .store-info span {
+    line-height: 1.3;
+  }
+}
 .wrapper {
   background-image: url("../images/bg-main.png") !important;
   background-size: cover;
@@ -14079,8 +14084,10 @@ section + section {
   line-height: 3rem;
 }
 .inx-banner .caption .title {
-  font-size: 4rem;
-  letter-spacing: 0.3em;
+  font-size: 4.8rem;
+  letter-spacing: 1rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 .inx-banner .caption .word {
   font-size: 1rem;
@@ -14099,11 +14106,17 @@ section + section {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.inx-banner .caption .tiny-glow-icon img {
+  -webkit-animation: glow 6s infinite;
+          animation: glow 6s infinite;
+}
 .inx-banner .caption .tiny-glow-icon img:nth-child(2) {
-  opacity: 0.6;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 .inx-banner .caption .tiny-glow-icon img:nth-child(3) {
-  opacity: 0.2;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 .inx-banner .cover {
   margin-top: -8rem;
@@ -14146,7 +14159,7 @@ section + section {
   content: "";
   position: absolute;
   background-image: url("../images/stone-b.png");
-  right: -10%;
+  right: -4%;
   top: 0;
   background-size: contain;
   background-repeat: no-repeat;
@@ -14172,8 +14185,8 @@ section + section {
   position: absolute;
   top: 6%;
   width: 100%;
-  height: 460px;
-  background-image: url("../images/mainVisual-window-foot-v6.png");
+  height: 500px;
+  background-image: url("../images/mainVisual-window-foot-v7.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -14193,6 +14206,11 @@ section + section {
   z-index: 2;
   -webkit-animation: scaleEffect 4s ease-in-out infinite;
           animation: scaleEffect 4s ease-in-out infinite;
+}
+
+.btn-primary:hover {
+  -webkit-filter: brightness(0.85) !important;
+          filter: brightness(0.85) !important;
 }
 
 .inx-divination {
@@ -14438,6 +14456,15 @@ input[type=time]::-webkit-calendar-picker-indicator {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.inx-booking .booking-container .booking-instruction::after {
+  content: "";
+  background-image: url("../images/stone-two.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  display: block;
+}
 .inx-booking .booking-container .booking-description {
   opacity: 0.6;
 }
@@ -14447,6 +14474,12 @@ input[type=time]::-webkit-calendar-picker-indicator {
 }
 
 @media (max-width: 1023.98px) {
+  .mainVisual-window-foot {
+    left: -5%;
+  }
+  .tiny-glow-icon {
+    margin: auto;
+  }
   .card-process-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -14570,6 +14603,28 @@ input[type=time]::-webkit-calendar-picker-indicator {
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+@-webkit-keyframes glow {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  33% {
+    opacity: 0.6;
+  }
+  66% {
+    opacity: 1;
+  }
+}
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  33% {
+    opacity: 0.6;
+  }
+  66% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -130,3 +130,10 @@
     }
 
 }
+
+// RWD 手機版
+@include media-breakpoint-down(md) {
+    .store-info span {
+        line-height: 1.3;
+    }
+}
