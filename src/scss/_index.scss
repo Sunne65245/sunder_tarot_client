@@ -590,50 +590,6 @@ input[type="time"]::-webkit-outer-spin-button {
         }
     }
 
-    // input[type="date"].form-control,
-    // input[type="time"].form-control {
-    //     min-width: 0;
-    //     width: 100%;
-    //     box-sizing: border-box;
-    // }
-
-    // /* 時段 */
-    // input[type="time"] {
-
-    //     background-image: url('../images/icon-time.svg');
-    //     background-size: contain;
-    //     background-position: right 10px center;
-    //     background-repeat: no-repeat;
-    //     padding-right: 30px;
-
-    //     // &:focus {
-    //     //     filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
-    //     // }
-    // }
-
-    // /* 電話 */
-    // input[type="tel"] {
-    //     background-image: url('../images/phone-icon.png');
-    //     background-position: right 10px center;
-    //     background-repeat: no-repeat;
-    //     padding-right: 30px;
-    // }
-
-    // /* 姓名和信箱 */
-    // input[type="text"] {
-    //     background-image: url('../images/user-icon.png');
-    //     background-position: right 10px center;
-    //     background-repeat: no-repeat;
-    //     padding-right: 30px;
-    // }
-
-    /* 問題textarea */
-    // textarea {
-    //     background-image: url('../images/question-icon.png');
-    //     background-position: right 10px top 10px;
-    //     background-repeat: no-repeat;
-    //     padding-right: 30px;
-    // }
 }
 
 
@@ -643,8 +599,6 @@ input[type="time"]::-webkit-outer-spin-button {
 
     .title-stone::after {
         content: none !important;
-        // 或
-        // display: none !important;
     }
 
     .tiny-glow-icon {

@@ -14453,9 +14453,6 @@ input[type=time]::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.inx-booking {
-  /* 問題textarea */
-}
 .inx-booking .booking-title {
   font-size: 1.25rem;
   display: -webkit-box;
