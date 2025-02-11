@@ -14079,7 +14079,7 @@ section + section {
   display: inline-block;
   opacity: 0.8;
   letter-spacing: 0.2em;
-  font-family: "Ibarra Real Nova", serif;
+  font-family: "Ibarra Real Nova", "Noto Serif TC";
   font-weight: 700;
 }
 .inx-banner .caption .subtitle span {
@@ -14434,12 +14434,6 @@ section + section {
   border-bottom: 1px #F7F4EB dashed;
 }
 
-input[type=date]::-webkit-calendar-picker-indicator,
-input[type=time]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-}
-
 .inx-booking {
   /* 問題textarea */
 }
@@ -14487,8 +14481,24 @@ input[type=time]::-webkit-calendar-picker-indicator {
   font-size: 0.8rem;
 }
 .inx-booking input,
+.inx-booking input[type=date],
+.inx-booking input[type=text],
 .inx-booking textarea {
   font-weight: 700;
+  background-color: rgba(255, 255, 255, 0);
+  color: #F7F4EB;
+}
+.inx-booking .form-control {
+  color: #F7F4EB;
+  border-left: 0;
+}
+.inx-booking .input-group-text {
+  background-color: rgba(255, 255, 255, 0);
+  border-right: 0;
+}
+.inx-booking .input-group-text img {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 1023.98px) {

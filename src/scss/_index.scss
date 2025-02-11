@@ -107,7 +107,7 @@ section+section {
             display: inline-block;
             opacity: .8;
             letter-spacing: 0.2em;
-            font-family: 'Ibarra Real Nova', serif;
+            font-family: 'Ibarra Real Nova', "Noto Serif TC";
             font-weight: 700;
 
             span {
@@ -481,11 +481,11 @@ section+section {
 }
 
 // /* 移除原本的 icon */
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
+// input[type="date"]::-webkit-calendar-picker-indicator,
+// input[type="time"]::-webkit-calendar-picker-indicator {
+//     display: none;
+//     -webkit-appearance: none;
+// }
 
 // 預約指引所
 .inx-booking {
@@ -537,8 +537,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     }
 
     input,
+    input[type="date"],
+    input[type="text"],
     textarea {
         font-weight: 700;
+        background-color: #ffffff00;
+        color: $primary;
+    }
+
+    .form-control {
+        color: $primary;
+        border-left: 0;
+    }
+
+    .input-group-text {
+        background-color: #ffffff00;
+        border-right: 0;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
     }
 
     // input[type="date"].form-control,
