@@ -14513,6 +14513,7 @@ input[type=time]::-webkit-outer-spin-button {
   display: flow;
 }
 .inx-booking .form-control {
+  background-color: rgba(255, 255, 255, 0);
   color: #F7F4EB !important;
   border-left: 0;
 }
