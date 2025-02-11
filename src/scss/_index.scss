@@ -590,6 +590,20 @@ input[type="time"]::-webkit-outer-spin-button {
         }
     }
 
+    // 針對 Safari 的特殊處理
+    input[type="date"],
+    input[type="time"] {
+        text-align: left !important;
+
+        &::-webkit-datetime-edit {
+            text-align: left;
+        }
+
+        &::-webkit-date-and-time-value {
+            text-align: left;
+        }
+    }
+
 }
 
 

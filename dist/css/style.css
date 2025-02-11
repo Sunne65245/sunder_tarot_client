@@ -14542,6 +14542,18 @@ input[type=time]::-webkit-outer-spin-button {
   width: 20px;
   height: 20px;
 }
+.inx-booking input[type=date],
+.inx-booking input[type=time] {
+  text-align: left !important;
+}
+.inx-booking input[type=date]::-webkit-datetime-edit,
+.inx-booking input[type=time]::-webkit-datetime-edit {
+  text-align: left;
+}
+.inx-booking input[type=date]::-webkit-date-and-time-value,
+.inx-booking input[type=time]::-webkit-date-and-time-value {
+  text-align: left;
+}
 
 @media (max-width: 1023.98px) {
   .title-stone::after {
