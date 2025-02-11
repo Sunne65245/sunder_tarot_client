@@ -253,6 +253,7 @@ section+section {
 
 }
 
+// 送出按鈕樣式
 .btn-primary {
     font-weight: 700;
 
@@ -260,7 +261,6 @@ section+section {
         filter: brightness(0.85) !important; // 整體變暗
     }
 }
-
 
 
 .inx-divination {
@@ -487,6 +487,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
+// 預約指引所
 .inx-booking {
     .booking-title {
         font-size: 1.25rem;
@@ -549,7 +550,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
     // /* 時段 */
     // input[type="time"] {
+
     //     background-image: url('../images/icon-time.svg');
+    //     background-size: contain;
     //     background-position: right 10px center;
     //     background-repeat: no-repeat;
     //     padding-right: 30px;
