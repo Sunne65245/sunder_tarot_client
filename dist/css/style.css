@@ -14212,12 +14212,12 @@ section + section {
           animation: scaleEffect 4s ease-in-out infinite;
 }
 
-.btn-primary {
+.btn-success {
   font-weight: 700;
+  color: #343a40;
 }
-.btn-primary:hover {
-  -webkit-filter: brightness(0.85) !important;
-          filter: brightness(0.85) !important;
+.btn-success:hover {
+  color: #000 !important;
 }
 
 .inx-divination {
@@ -14434,6 +14434,26 @@ section + section {
   border-bottom: 1px #F7F4EB dashed;
 }
 
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+input[type=time]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=time]::-webkit-inner-spin-button,
+input[type=time]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .inx-booking {
   /* 問題textarea */
 }
@@ -14483,14 +14503,39 @@ section + section {
 .inx-booking input,
 .inx-booking input[type=date],
 .inx-booking input[type=text],
+.inx-booking input[type=tel],
+.inx-booking input[type=email],
+.inx-booking input[type=time],
 .inx-booking textarea {
   font-weight: 700;
   background-color: rgba(255, 255, 255, 0);
-  color: #F7F4EB;
+}
+.inx-booking .notes-input {
+  display: flow;
 }
 .inx-booking .form-control {
-  color: #F7F4EB;
+  color: #F7F4EB !important;
   border-left: 0;
+}
+.inx-booking .form-control::-webkit-input-placeholder {
+  color: #F7F4EB !important;
+  opacity: 1;
+}
+.inx-booking .form-control::-moz-placeholder {
+  color: #F7F4EB !important;
+  opacity: 1;
+}
+.inx-booking .form-control:-ms-input-placeholder {
+  color: #F7F4EB !important;
+  opacity: 1;
+}
+.inx-booking .form-control::-ms-input-placeholder {
+  color: #F7F4EB !important;
+  opacity: 1;
+}
+.inx-booking .form-control::placeholder {
+  color: #F7F4EB !important;
+  opacity: 1;
 }
 .inx-booking .input-group-text {
   background-color: rgba(255, 255, 255, 0);

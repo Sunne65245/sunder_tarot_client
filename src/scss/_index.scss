@@ -254,11 +254,12 @@ section+section {
 }
 
 // 送出按鈕樣式
-.btn-primary {
+.btn-success {
     font-weight: 700;
+    color: $gray-800;
 
     &:hover {
-        filter: brightness(0.85) !important; // 整體變暗
+        color: $black !important;
     }
 }
 
@@ -481,11 +482,28 @@ section+section {
 }
 
 // /* 移除原本的 icon */
-// input[type="date"]::-webkit-calendar-picker-indicator,
-// input[type="time"]::-webkit-calendar-picker-indicator {
-//     display: none;
-//     -webkit-appearance: none;
-// }
+// 隱藏日期輸入框的日曆圖示
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+// 隱藏時間輸入框的時鐘圖示
+input[type="time"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+// 如果需要，也可以隱藏其他瀏覽器的日曆圖示
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 // 預約指引所
 .inx-booking {
@@ -539,15 +557,26 @@ section+section {
     input,
     input[type="date"],
     input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="time"],
     textarea {
         font-weight: 700;
         background-color: #ffffff00;
-        color: $primary;
+    }
+
+    .notes-input {
+        display: flow;
     }
 
     .form-control {
-        color: $primary;
+        color: $primary !important;
         border-left: 0;
+    }
+
+    .form-control::placeholder {
+        color: $primary !important;
+        opacity: 1; // Firefox 需要這個
     }
 
     .input-group-text {
