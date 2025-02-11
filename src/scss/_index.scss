@@ -181,8 +181,8 @@ section+section {
         &::before {
             content: "";
             position: absolute;
-            left: 30%;
-            top: 2%;
+            left: 0%;
+            top: 30%;
             background-image: url("../images/stone-s.png");
             background-size: contain;
             background-repeat: no-repeat;
@@ -197,7 +197,7 @@ section+section {
             content: "";
             position: absolute;
             background-image: url("../images/stone-b.png");
-            // right: -4%;
+            right: 0;
             top: 0;
             background-size: contain;
             background-repeat: no-repeat;
@@ -225,7 +225,7 @@ section+section {
     .mainVisual-window-foot {
         position: absolute;
         top: 6%;
-        width: 95%;
+        width: 86%;
         height: 500px;
         background-image: url("../images/mainVisual-window-foot-v7.png");
         background-size: contain;
@@ -589,17 +589,16 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 // RWD 平版
 @include media-breakpoint-down(lg) {
 
-    // .mainVisual-window-foot {
-    //     left: -5%;
-    // }
+    .title-stone::after {
+        content: none !important;
+        // 或
+        // display: none !important;
+    }
 
     .tiny-glow-icon {
         margin: auto;
     }
 
-    .stone-elements::after {
-        right: 0%;
-    }
 
     // 流程卡片
     .card-process-list {
