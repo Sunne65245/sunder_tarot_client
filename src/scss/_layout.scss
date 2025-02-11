@@ -61,6 +61,7 @@
     padding: 64px 0;
     background-color: $footer-bg;
     color: $primary;
+    font-weight: 700;
 
     .caption {
         display: flex;
@@ -68,6 +69,7 @@
 
         .subtitle {
             font-size: 1.8rem;
+            font-weight: 700;
             background: linear-gradient(to bottom, $primary 0%, $success 50%, $success 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -85,7 +87,7 @@
             flex-direction: column;
             letter-spacing: 0.3em;
             margin-top: 1.2px;
-
+            font-weight: 700;
         }
 
         .word {

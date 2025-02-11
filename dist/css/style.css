@@ -13471,6 +13471,7 @@ textarea.form-control-lg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    font-weight: 700;
   }
   .inx-logo .inx-title span + span {
     font-size: 0.75rem;
@@ -13567,6 +13568,7 @@ textarea.form-control-lg {
     font-size: 1.125rem;
     color: #F7F4EB;
     padding: 1rem;
+    font-weight: 700;
   }
   .navbar-nav .dropdown-toggle::after {
     display: none;
@@ -13631,6 +13633,7 @@ textarea.form-control-lg {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    font-weight: 700;
   }
   .inx-logo .inx-title span + span {
     font-size: 0.75rem;
@@ -13822,6 +13825,9 @@ textarea.form-control-lg {
     font-size: 1rem;
     font-weight: 400;
   }
+  .header.sticky .navbar-nav .nav-item span {
+    font-weight: 700;
+  }
   .header.sticky .navbar-nav .nav-item .nav-link:hover {
     opacity: 0.6;
   }
@@ -13903,6 +13909,7 @@ textarea.form-control-lg {
   padding: 64px 0;
   background-color: #666246;
   color: #F7F4EB;
+  font-weight: 700;
 }
 .footer .caption {
   display: -webkit-box;
@@ -13915,6 +13922,7 @@ textarea.form-control-lg {
 }
 .footer .caption .subtitle {
   font-size: 1.8rem;
+  font-weight: 700;
   background: -webkit-gradient(linear, left top, left bottom, from(#F7F4EB), color-stop(50%, #D8B14C), to(#D8B14C));
   background: linear-gradient(to bottom, #F7F4EB 0%, #D8B14C 50%, #D8B14C 100%);
   -webkit-background-clip: text;
@@ -13937,6 +13945,7 @@ textarea.form-control-lg {
           flex-direction: column;
   letter-spacing: 0.3em;
   margin-top: 1.2px;
+  font-weight: 700;
 }
 .footer .caption .word {
   margin-top: 0.5rem;
@@ -13999,6 +14008,7 @@ section + section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-weight: 700;
 }
 .inx-head .title-icon {
   color: #D8B14C;
@@ -14083,6 +14093,7 @@ section + section {
   letter-spacing: 1rem;
   line-height: 1.2;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 .inx-banner .caption .word {
   font-size: 1rem;
@@ -14178,7 +14189,7 @@ section + section {
 .inx-banner .mainVisual-window-foot {
   position: absolute;
   top: 6%;
-  width: 100%;
+  width: 95%;
   height: 500px;
   background-image: url("../images/mainVisual-window-foot-v7.png");
   background-size: contain;
@@ -14202,6 +14213,9 @@ section + section {
           animation: scaleEffect 4s ease-in-out infinite;
 }
 
+.btn-primary {
+  font-weight: 700;
+}
 .btn-primary:hover {
   -webkit-filter: brightness(0.85) !important;
           filter: brightness(0.85) !important;
@@ -14298,12 +14312,14 @@ section + section {
   color: #F7F4EB;
   font-size: 1.5rem;
   margin-bottom: 8px;
+  font-weight: 700;
 }
 .inx-divination .card-process-list .card-flip .card.front .card-text {
   color: #F7F4EB;
   font-size: 1rem;
   opacity: 0.4;
   letter-spacing: 0.1rem;
+  font-weight: 700;
 }
 .inx-divination .card-process-list .card-flip .card.back {
   background-image: url("../images/inquiry-imag-back.jpg");
@@ -14316,6 +14332,7 @@ section + section {
   margin: 20px auto 36px;
   text-align: center;
   opacity: 0.75;
+  font-weight: 700;
 }
 .inx-divination .card-process-list .card-flip .card.back .card-list {
   padding: 0 16px;
@@ -14324,6 +14341,7 @@ section + section {
   font-size: 1rem;
   margin: 16px 0;
   opacity: 0.75;
+  font-weight: 700;
 }
 .inx-divination .card-process-list .card-flip .card.back .card-list .list-unstyled {
   font-size: 0.8rem;
@@ -14381,6 +14399,7 @@ section + section {
 .inx-divination .notice .card-list .card-subtitle {
   font-size: 1.2rem;
   margin: 16px 0;
+  font-weight: 700;
 }
 .inx-divination .notice .card-list .list-unstyled {
   font-size: 1rem;
@@ -14431,6 +14450,7 @@ input[type=time]::-webkit-calendar-picker-indicator {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 16px;
+  font-weight: 700;
 }
 .inx-booking .booking-title::before {
   content: "";
@@ -14460,17 +14480,19 @@ input[type=time]::-webkit-calendar-picker-indicator {
   display: block;
 }
 .inx-booking .booking-container .booking-description {
-  opacity: 0.6;
+  font-weight: 700;
+  opacity: 0.8;
 }
 .inx-booking .booking-container .booking-slogan {
   opacity: 0.6;
   font-size: 0.8rem;
 }
+.inx-booking input,
+.inx-booking textarea {
+  font-weight: 700;
+}
 
 @media (max-width: 1023.98px) {
-  .mainVisual-window-foot {
-    left: -5%;
-  }
   .tiny-glow-icon {
     margin: auto;
   }
