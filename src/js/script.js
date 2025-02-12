@@ -1,7 +1,5 @@
 $(function () {
   // Functions 區塊
-  // 保存商品原始單價
-  const originalPrice = parseInt($('.unit-price').text());  // 儲存初始單價
 
   // Header 固定在頂部功能
   const handleStickyHeader = function () {
@@ -12,10 +10,27 @@ $(function () {
     }
   };
 
-  // 計算總價格功能
-  const updateTotalPrice = function (quantity) {
-    const total = originalPrice * quantity;  // 使用原始單價計算
-    $('.unit-price').text(total.toLocaleString());
+  // 獲取導航選單和初始化 Bootstrap Collapse
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+  const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+    toggle: false
+  });
+
+  // 處理導航連結點擊
+  const handleNavClick = function (e) {
+    e.preventDefault();
+    const targetId = $(this).attr('href').slice(1);
+    const targetElement = $(`#${targetId}`);
+
+    if (targetElement.length) {
+      // 使用 jQuery 動畫滾動
+      $('html, body').animate({
+        scrollTop: targetElement.offset().top
+      }, 500);
+
+      // 關閉導航選單
+      bsCollapse.hide();
+    }
   };
 
   // 初始化執行
@@ -35,31 +50,6 @@ $(function () {
       $('html, body').animate({ scrollTop: 0 }, 500);
     })
     .on('scroll', window, handleStickyHeader)
-    .on('click', '.category-group-title', function (e) {
-      e.preventDefault();
-      const $content = $(this).next('.category-group-content');
-      const $arrow = $(this).find('.arrow-down');
-
-      $('.category-group-content.active').not($content).removeClass('active');
-      $('.arrow-down.active').not($arrow).removeClass('active');
-
-      $content.toggleClass('active');
-      $arrow.toggleClass('active');
-    })
-    // 商品數量減少
-    .on('click', '.btn-minus', function () {
-      const $input = $(this).siblings('input');
-      const currentValue = parseInt($input.val());
-      if (currentValue > 1) {
-        $input.val(currentValue - 1);
-        updateTotalPrice(currentValue - 1);
-      }
-    })
-    // 商品數量增加
-    .on('click', '.btn-plus', function () {
-      const $input = $(this).siblings('input');
-      const currentValue = parseInt($input.val());
-      $input.val(currentValue + 1);
-      updateTotalPrice(currentValue + 1);
-    });
+    // 添加導航連結點擊事件
+    .on('click', '.nav-link', handleNavClick);
 });
